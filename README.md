@@ -140,8 +140,6 @@ La interfaz puede personalizarse con:
   <img src="assets/readme/showcase-04.png" alt="Showcase 4" width="49%" />
 </p>
 
-> 💡 **Sugerencia:** guarda las imágenes promocionales del README dentro de `assets/readme/` para mantener el repositorio limpio y facilitar su reutilización en GitHub, documentación o Microsoft Store.
-
 ---
 
 ## 🧰 Tecnologías utilizadas
