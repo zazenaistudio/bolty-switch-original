@@ -1,0 +1,4 @@
+psutil>=6.1,<8
+rapidfuzz>=3.10,<4
+vosk>=0.3.45,<0.4
+sounddevice>=0.5,<0.6
