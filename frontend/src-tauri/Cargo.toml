@@ -1,0 +1,19 @@
+[package]
+name = "bolty-switch"
+version = "0.6.6"
+description = "Bolty Switch — automatización de Windows mediante eventos"
+authors = ["Zazen AI Studio"]
+edition = "2021"
+
+[lib]
+name = "bolty_switch_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-dialog = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

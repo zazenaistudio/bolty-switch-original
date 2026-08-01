@@ -1,0 +1,206 @@
+:root {
+  --color-bg: #03040A;
+  --color-bg-deep: #010207;
+  --color-surface: #0B1020;
+  --color-surface-raised: #10172D;
+  --color-primary: #5B8CFF;
+  --color-secondary: #7C4DFF;
+  --color-accent: #2EE6D6;
+  --color-highlight: #19234A;
+  --color-success: #37D39A;
+  --color-danger: #FF5F7A;
+  --color-text: #F3F7FF;
+  --color-text-muted: #8B98B8;
+  --color-border: color-mix(in srgb, var(--color-primary) 18%, transparent);
+  --color-border-strong: color-mix(in srgb, var(--color-primary) 42%, transparent);
+  --color-hover: color-mix(in srgb, var(--color-highlight) 76%, var(--color-primary));
+  --color-pressed: color-mix(in srgb, var(--color-highlight) 70%, var(--color-secondary));
+  --color-disabled: color-mix(in srgb, var(--color-text-muted) 40%, transparent);
+  --focus-ring: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent);
+
+  --font-ui: Inter, "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Segoe UI Variable Display", var(--font-ui);
+  --text-xs: clamp(.69rem, .66rem + .08vw, .75rem);
+  --text-sm: clamp(.78rem, .74rem + .1vw, .86rem);
+  --text-md: clamp(.9rem, .86rem + .12vw, 1rem);
+  --text-lg: clamp(1.05rem, 1rem + .2vw, 1.2rem);
+  --text-xl: clamp(1.3rem, 1.18rem + .4vw, 1.65rem);
+  --text-2xl: clamp(1.8rem, 1.55rem + .8vw, 2.55rem);
+  --text-hero: clamp(2.15rem, 1.7rem + 1.35vw, 3.65rem);
+
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  --shadow-low: 0 8px 24px color-mix(in srgb, var(--color-bg-deep) 70%, transparent);
+  --shadow-medium: 0 18px 45px color-mix(in srgb, var(--color-bg-deep) 78%, transparent);
+  --shadow-glow: 0 0 28px color-mix(in srgb, var(--color-primary) 24%, transparent);
+  --shadow-accent: 0 0 24px color-mix(in srgb, var(--color-accent) 24%, transparent);
+
+  --duration-press: 90ms;
+  --duration-hover: 140ms;
+  --duration-page: 240ms;
+  --duration-modal: 260ms;
+  --ease-standard: cubic-bezier(.2, .8, .2, 1);
+  --titlebar-height: 44px;
+  --sidebar-width: 248px;
+  --command-height: 78px;
+}
+
+/* v0.5.8 cosmic theme palettes */
+:root,
+:root[data-cosmic-theme="nebula-blue"] {
+  --cosmic-bg-a: #02040d;
+  --cosmic-bg-b: #061024;
+  --cosmic-nebula-a: #5b8cff;
+  --cosmic-nebula-b: #2ee6d6;
+  --cosmic-aurora-a: #7c4dff;
+  --cosmic-aurora-b: #36c8ff;
+  --cosmic-star: #dcecff;
+  --cosmic-comet: #79f6ff;
+}
+
+:root[data-cosmic-theme="void-black"] {
+  --color-bg: #010204;
+  --color-bg-deep: #000000;
+  --color-surface: #070a10;
+  --color-surface-raised: #0c121c;
+  --color-primary: #3c79d8;
+  --color-secondary: #184d93;
+  --color-accent: #8edcff;
+  --color-highlight: #101b2c;
+  --cosmic-bg-a: #000000;
+  --cosmic-bg-b: #03070d;
+  --cosmic-nebula-a: #1e4d85;
+  --cosmic-nebula-b: #6ad7ff;
+  --cosmic-aurora-a: #173966;
+  --cosmic-aurora-b: #7edfff;
+  --cosmic-star: #edf8ff;
+  --cosmic-comet: #b7ecff;
+}
+
+:root[data-cosmic-theme="violet-dream"] {
+  --color-bg: #070313;
+  --color-bg-deep: #020106;
+  --color-surface: #12091f;
+  --color-surface-raised: #1d1032;
+  --color-primary: #8f63ff;
+  --color-secondary: #c04cff;
+  --color-accent: #65d8ff;
+  --color-highlight: #2b1749;
+  --cosmic-bg-a: #05010d;
+  --cosmic-bg-b: #17062f;
+  --cosmic-nebula-a: #a65cff;
+  --cosmic-nebula-b: #d76cff;
+  --cosmic-aurora-a: #6f4cff;
+  --cosmic-aurora-b: #ff75d8;
+  --cosmic-star: #f0e8ff;
+  --cosmic-comet: #c990ff;
+}
+
+:root[data-cosmic-theme="aurora-teal"] {
+  --color-bg: #011011;
+  --color-bg-deep: #000606;
+  --color-surface: #06191b;
+  --color-surface-raised: #0b272a;
+  --color-primary: #1fa3b8;
+  --color-secondary: #2b7fff;
+  --color-accent: #45f5d0;
+  --color-highlight: #103c3d;
+  --cosmic-bg-a: #000b0d;
+  --cosmic-bg-b: #04202b;
+  --cosmic-nebula-a: #17c9a5;
+  --cosmic-nebula-b: #31b8ff;
+  --cosmic-aurora-a: #43ffb3;
+  --cosmic-aurora-b: #38a8ff;
+  --cosmic-star: #dcfff7;
+  --cosmic-comet: #73ffe0;
+}
+
+:root[data-cosmic-theme="magenta-pulse"] {
+  --color-bg: #10020d;
+  --color-bg-deep: #050104;
+  --color-surface: #20091c;
+  --color-surface-raised: #30102a;
+  --color-primary: #ff4fc3;
+  --color-secondary: #8d54ff;
+  --color-accent: #ff93e7;
+  --color-highlight: #4b1741;
+  --cosmic-bg-a: #0d010a;
+  --cosmic-bg-b: #2c0826;
+  --cosmic-nebula-a: #ff4fc3;
+  --cosmic-nebula-b: #a855f7;
+  --cosmic-aurora-a: #ff6dd4;
+  --cosmic-aurora-b: #7c4dff;
+  --cosmic-star: #ffe6f7;
+  --cosmic-comet: #ff9ee5;
+}
+
+:root[data-cosmic-theme="supernova-red"] {
+  --color-bg: #100302;
+  --color-bg-deep: #040100;
+  --color-surface: #210c0a;
+  --color-surface-raised: #321410;
+  --color-primary: #ff604a;
+  --color-secondary: #ff9b3d;
+  --color-accent: #ffd07d;
+  --color-highlight: #4b2018;
+  --cosmic-bg-a: #0d0201;
+  --cosmic-bg-b: #310805;
+  --cosmic-nebula-a: #ff553d;
+  --cosmic-nebula-b: #ffb347;
+  --cosmic-aurora-a: #ff743d;
+  --cosmic-aurora-b: #ffc063;
+  --cosmic-star: #fff0d9;
+  --cosmic-comet: #ffd18a;
+}
+
+:root[data-cosmic-theme="emerald-orbit"] {
+  --color-bg: #020d08;
+  --color-bg-deep: #000503;
+  --color-surface: #071b13;
+  --color-surface-raised: #0b2a1d;
+  --color-primary: #24bd78;
+  --color-secondary: #2ad0a0;
+  --color-accent: #72ffc4;
+  --color-highlight: #123b29;
+  --cosmic-bg-a: #010a06;
+  --cosmic-bg-b: #062719;
+  --cosmic-nebula-a: #1cc97b;
+  --cosmic-nebula-b: #50e4b3;
+  --cosmic-aurora-a: #50ff9a;
+  --cosmic-aurora-b: #22b98e;
+  --cosmic-star: #e1fff0;
+  --cosmic-comet: #7affc2;
+}
+
+:root[data-cosmic-theme="golden-eclipse"] {
+  --color-bg: #0c0902;
+  --color-bg-deep: #030200;
+  --color-surface: #1a1407;
+  --color-surface-raised: #29200d;
+  --color-primary: #d99a2b;
+  --color-secondary: #f0c45b;
+  --color-accent: #ffe39a;
+  --color-highlight: #463718;
+  --cosmic-bg-a: #090601;
+  --cosmic-bg-b: #2a1d04;
+  --cosmic-nebula-a: #e3a72f;
+  --cosmic-nebula-b: #ffe082;
+  --cosmic-aurora-a: #d88c1d;
+  --cosmic-aurora-b: #ffe6a8;
+  --cosmic-star: #fff8db;
+  --cosmic-comet: #ffe08b;
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Bolty Switch",
+  "version": "0.6.6",
+  "identifier": "com.zazenaistudio.boltyswitch",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Bolty Switch",
+        "label": "main",
+        "width": 1500,
+        "height": 900,
+        "minWidth": 720,
+        "minHeight": 620,
+        "center": true,
+        "decorations": false,
+        "transparent": false,
+        "resizable": true,
+        "maximizable": true,
+        "fullscreen": false,
+        "shadow": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self' asset: http://asset.localhost; img-src 'self' asset: http://asset.localhost data: blob:; media-src 'self' asset: http://asset.localhost; style-src 'self' 'unsafe-inline'; connect-src 'self' ipc: http://ipc.localhost"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "nsis",
+      "msi"
+    ],
+    "icon": [
+      "icons/icon.ico"
+    ],
+    "resources": {
+      "../../backend/bolty-backend.exe": "backend/bolty-backend.exe"
+    },
+    "windows": {
+      "wix": {
+        "language": "es-ES"
+      },
+      "nsis": {
+        "installerIcon": "icons/icon.ico",
+        "languages": [
+          "Spanish"
+        ],
+        "displayLanguageSelector": false
+      }
+    },
+    "publisher": "Zazen AI Studio",
+    "copyright": "© 2026 Zazen AI Studio",
+    "shortDescription": "Automatización de Windows mediante eventos, texto y voz.",
+    "longDescription": "Bolty Switch organiza y ejecuta aplicaciones, páginas web, archivos, contenido multimedia, tareas del sistema y guiones desde una interfaz cósmica."
+  }
+}
